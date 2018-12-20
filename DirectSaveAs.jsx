@@ -1,6 +1,6 @@
-﻿/* 
+﻿/*
 ==============================================================================================
-DirectSaveAs@ToyBox
+DirectSaveAs
 Last Update:2018/12/14
 https://github.com/yukichi0306/
 ++Introduction++
@@ -89,7 +89,7 @@ if(flag == true)
 pngFile = new File(filePath);//パス指定とファイル名
 pngOpt = new PNGSaveOptions();
 pngOpt.interlaced = false;
-activeDocument.saveAs(pngFile, pngOpt, true, Extension.LOWERCASE);  
+activeDocument.saveAs(pngFile, pngOpt, true, Extension.LOWERCASE);
 alert('Finish');
 }
 else if(flag == false)
@@ -97,7 +97,7 @@ else if(flag == false)
     alert("保存先に指定されたフォルダが存在しません。");
     }
 }
-//=============================================================================== 
+//===============================================================================
 
 //Tga画像を保存する====================================================================
 function DirectTgaSave()
