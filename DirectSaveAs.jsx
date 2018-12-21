@@ -1,7 +1,7 @@
 ﻿/*
 ==============================================================================================
 DirectSaveAs
-Last Update:2018/12/14
+Last Update:2018/12/20
 https://github.com/yukichi0306/
 ++Introduction++
 レイヤー名を++[上書きしたいファイルの絶対パス]にして実行すると、上書きするスクリプト
@@ -51,12 +51,8 @@ else if(pathEgg.length > 1)
     alert("保存先を示したレイヤーが２つ以上あります。");
     }
 
-
-
-
 function DirectSave()
 {
-    //var wordCount = pathEgg[0].length;
     var formatJudge  = pathEgg[0].slice(-4);
     var PngJudge = formatJudge.indexOf('.png');
     var TgaJudge = formatJudge.indexOf('.tga');
