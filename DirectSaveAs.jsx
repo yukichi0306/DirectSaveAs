@@ -1,20 +1,30 @@
-﻿/*
+/*
 ==============================================================================================
-DirectSaveAs
-Last Update:2018/12/20
+
+# DirectSaveAs
+Update:2020/06/09
+条件分岐として、レイヤーの表示状態を追加
+
 https://github.com/yukichi0306/
 ++Introduction++
-レイヤー名を++[上書きしたいファイルの絶対パス]にして実行すると、上書きするスクリプト
+レイヤー名を、++[上書きしたいファイルの絶対パス]にし、表示状態で実行すると、
+pngかtgaで上書きするスクリプト
+
 ==============================================================================================
 */
 var docObj = activeDocument;
 var pathEgg = [];   //保存先候補
 var layName = [];   //レイヤー名
+var visiNum = 0;
 
 //レイヤー名を配列に
-for (i = 0; i < docObj.layers.length; i++)
+for (i = 0; i < docObj.artLayers.length; i++)
 {
-    layName[i] = docObj.layers[i].name;
+    if(docObj.artLayers[i].visible)
+        {
+    layName[visiNum] = docObj.artLayers[i].name;
+            visiNum++;
+            }
 }
 
 //レイヤーセット内のレイヤー名を配列に
